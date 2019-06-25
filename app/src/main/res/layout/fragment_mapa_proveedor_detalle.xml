@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:paddingTop="8dp"
+              android:paddingBottom="0dp">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <ImageView
+            android:id="@+id/iv_foto_proveedor"
+            android:layout_width="80dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="8dp"
+            android:contentDescription="No Image"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/baseline_image_black_24"/>
+
+        <TextView
+            android:id="@+id/tv_nombre_proveedor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto"
+            android:maxLines="1"
+            android:text="Nombre: "
+            android:textStyle="bold"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorTextLight"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/bt_ver_perfil"
+            app:layout_constraintStart_toEndOf="@+id/iv_foto_proveedor"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_calificacion_promedio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/roboto"
+            android:text=""
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorTextLight"
+            android:textSize="@dimen/font_body_s_size"
+            app:layout_constraintStart_toEndOf="@+id/iv_foto_proveedor"
+            app:layout_constraintTop_toBottomOf="@+id/tv_nombre_proveedor"/>
+
+        <ImageView
+            android:id="@+id/iv_calificacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintStart_toEndOf="@+id/tv_calificacion_promedio"
+            app:layout_constraintTop_toBottomOf="@+id/tv_nombre_proveedor"
+            app:srcCompat="@drawable/ic_star_yellow_600_24dp"/>
+
+        <TextView
+            android:id="@+id/tv_calificacion_cantidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/roboto"
+            android:text=""
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorTextLight"
+            android:textSize="@dimen/font_body_s_size"
+            app:layout_constraintStart_toEndOf="@+id/iv_calificacion"
+            app:layout_constraintTop_toBottomOf="@+id/tv_nombre_proveedor"/>
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/dividerTextView"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="8dp"-->
+        <!--            android:layout_marginTop="12dp"-->
+        <!--            android:text="-"-->
+        <!--            android:textAlignment="viewStart"-->
+        <!--            android:textSize="@dimen/font_body_s_size"-->
+        <!--            app:layout_constraintStart_toEndOf="@+id/ratingTextView"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/placeNameTextView" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/distanceTextView"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="8dp"-->
+        <!--            android:layout_marginTop="12dp"-->
+        <!--            android:fontFamily="@font/roboto"-->
+        <!--            android:text="7 km"-->
+        <!--            android:textColor="@color/colorTextLight"-->
+        <!--            android:textSize="@dimen/font_body_s_size"-->
+        <!--            app:layout_constraintStart_toEndOf="@+id/dividerTextView"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/placeNameTextView" />-->
+
+        <Button
+            android:id="@+id/bt_ver_perfil"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/button_round_corner"
+            android:drawableLeft="@drawable/ic_person"
+            android:fontFamily="@font/roboto"
+            android:padding="@dimen/space_4"
+            android:text="VER PERFIL"
+            android:textAlignment="viewStart"
+            android:textColor="@color/md_white_1000"
+            android:textSize="@dimen/font_body_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"/>
+
+        <!--        <ImageView-->
+        <!--            android:id="@+id/infoImageView"-->
+        <!--            android:layout_width="24dp"-->
+        <!--            android:layout_height="24dp"-->
+        <!--            android:layout_marginStart="8dp"-->
+        <!--            android:layout_marginTop="8dp"-->
+        <!--            android:layout_marginBottom="8dp"-->
+        <!--            android:contentDescription="No Image"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@+id/bottomContainerView"-->
+        <!--            app:layout_constraintStart_toStartOf="@+id/bottomContainerView"-->
+        <!--            app:layout_constraintTop_toTopOf="@+id/bottomContainerView"-->
+        <!--            app:srcCompat="@drawable/baseline_info_line_24" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/moreTextView"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="8dp"-->
+        <!--            android:layout_marginTop="8dp"-->
+        <!--            android:layout_marginBottom="8dp"-->
+        <!--            android:fontFamily="@font/roboto"-->
+        <!--            android:text="More Info"-->
+        <!--            android:textAlignment="viewStart"-->
+        <!--            android:textColor="@color/colorTextLight"-->
+        <!--            android:textSize="@dimen/font_body_size"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@+id/bottomContainerView"-->
+        <!--            app:layout_constraintStart_toEndOf="@+id/infoImageView"-->
+        <!--            app:layout_constraintTop_toTopOf="@+id/bottomContainerView" />-->
+
+
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

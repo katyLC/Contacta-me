@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    android:id="@+id/holderCardView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_usuario_foto"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/baseline_image_black_24" />
+
+    <TextView
+        android:id="@+id/tv_usuario_nombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Chris"
+        android:textAlignment="viewStart"
+        android:textColor="@color/md_grey_800"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_timestamp"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toEndOf="@+id/iv_usuario_foto"
+        app:layout_constraintTop_toTopOf="@+id/iv_usuario_foto" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="20dp"
+        android:layout_height="18dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_mensaje"
+        app:layout_constraintTop_toBottomOf="@+id/tv_timestamp"
+        app:layout_constraintVertical_bias="0.2">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/messagecount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/red_300"
+                android:fontFamily="@font/roboto"
+                android:maxLength="2"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/md_white_1000"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="Sep 4, 2017"
+        android:textAlignment="viewStart"
+        android:textColor="@color/md_grey_600"
+        android:textSize="@dimen/font_body_s_size"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_usuario_nombre"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_mensaje"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto"
+        android:maxLines="2"
+        android:text="@string/dummy_small_text"
+        android:textAlignment="viewStart"
+        android:textColor="@color/md_grey_600"
+        android:textSize="@dimen/font_body_size"
+        app:layout_constraintBottom_toTopOf="@+id/view81"
+        app:layout_constraintEnd_toStartOf="@+id/tv_timestamp"
+        app:layout_constraintStart_toEndOf="@+id/iv_usuario_foto"
+        app:layout_constraintTop_toBottomOf="@+id/tv_usuario_nombre" />
+
+    <View
+        android:id="@+id/view81"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
+

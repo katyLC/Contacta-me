@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menuContainer"
+    android:layout_width="match_parent"
+    android:layout_height="172dp"
+    android:background="@color/blue_grey_900"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:id="@+id/profileContainer"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/header_nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center_horizontal"
+            android:text="Invitado"
+            android:textSize="26sp"/>
+
+        <TextView
+            android:id="@+id/header_cambiar_estado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header_nombre"
+            android:layout_marginTop="4dp"
+            android:gravity="center_horizontal"
+            android:text="Cerrar Sesion"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/fotoContainer"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="80dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/header_foto"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/avatar"/>
+    </RelativeLayout>
+</RelativeLayout>

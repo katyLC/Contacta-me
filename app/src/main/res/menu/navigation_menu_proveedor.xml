@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_perfil"
+        android:icon="@drawable/ic_person_outline_white_24dp"
+        android:title="Mi Perfil"/>
+    <item
+        android:id="@+id/nav_mensaje"
+        android:icon="@drawable/ic_message_24dp"
+        android:title="Mis Mensajes"/>
+
+    <item
+        android:id="@+id/nav_servicio"
+        android:icon="@drawable/ic_work_white_24dp"
+        android:title="Mi Servicio"/>
+    <item
+        android:id="@+id/nav_citas"
+        android:icon="@drawable/ic_description_white_24dp"
+        android:title="Mis Citas"/>
+    <item
+        android:id="@+id/nav_calificaciones"
+        android:icon="@drawable/ic_stars_white_24dp"
+        android:title="Mis Calificaciones"/>
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/ic_lock_open_white_24dp"
+        android:title="Cerrar Sesión"/>
+</menu>

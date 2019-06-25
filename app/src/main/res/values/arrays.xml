@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="categoria_icon">
+        <item>@drawable/ic_electricidad</item>
+        <item>@drawable/ic_carpinteria</item>
+        <item>@drawable/ic_cerrajeria</item>
+        <item>@drawable/ic_mecanico</item>
+        <item>@drawable/ic_pintura</item>
+        <item>@drawable/ic_albanil</item>
+        <item>@drawable/ic_limpieza</item>
+    </integer-array>
+
+    <integer-array name="categoria_foto">
+        <item>@drawable/electricista</item>
+        <item>@drawable/carpintero</item>
+        <item>@drawable/cerrajeros</item>
+        <item>@drawable/mecanico</item>
+        <item>@drawable/pintor</item>
+        <item>@drawable/albanil</item>
+        <item>@drawable/limpieza</item>
+    </integer-array>
+
+    <string-array name="categoria_descripcion">
+        <item>Electricidad</item>
+        <item>Carpintería</item>
+        <item>Cerrajería</item>
+        <item>Mecánico</item>
+        <item>Pintura</item>
+        <item>Albañilería</item>
+        <item>Limpieza</item>
+    </string-array>
+
+    <string-array name="shop_category_brief">
+        <item>100k Items</item>
+        <item>655k Items</item>
+        <item>221k Items</item>
+        <item>85k Items</item>
+        <item>725k Items</item>
+        <item>932k Items</item>
+        <item>475k Items</item>
+        <item>362k Items</item>
+    </string-array>
+</resources>

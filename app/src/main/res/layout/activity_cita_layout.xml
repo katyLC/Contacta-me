@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_grey_100"
+    tools:context=".activities.CitaActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/red_300"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                app:cardElevation="8dp"
+                app:cardCornerRadius="20dp"
+                android:id="@+id/paymentCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/orderConfirmationCardView">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/bankImageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="8dp"
+                        android:tint="@color/md_grey_600"
+                        app:layout_constraintBottom_toTopOf="@+id/bankLineView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_people_24"/>
+
+                    <TextView
+                        android:id="@+id/bankTitleTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="DATOS DEL PROVEEDOR"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/md_grey_800"
+                        android:textSize="@dimen/font_body_size"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/bankImageView"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/stripeDetailTextView1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/roboto"
+                        android:lineSpacingExtra="8sp"
+                        android:text="Nombres: "
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/md_grey_800"
+                        android:textSize="@dimen/font_body_size"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/bankLineView"/>
+
+                    <TextView
+                        android:id="@+id/stripeDetailTextView11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/roboto"
+                        android:lineSpacingExtra="8sp"
+                        android:text="Tipo de servicio:"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/md_grey_800"
+                        android:textSize="@dimen/font_body_size"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/stripeDetailTextView1"/>
+
+                    <TextView
+                        android:id="@+id/tv_nombre_proveedor"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="@font/roboto"
+                        android:lineSpacingExtra="8sp"
+                        android:text=""
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/md_grey_800"
+                        android:textSize="@dimen/font_body_size"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/stripeDetailTextView1"/>
+
+                    <TextView
+                        android:id="@+id/tv_tipo_servicio"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="@font/roboto"
+                        android:lineSpacingExtra="8sp"
+                        android:text=""
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/md_grey_800"
+                        android:textSize="@dimen/font_body_size"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/stripeDetailTextView11"/>
+
+                    <View
+                        android:id="@+id/bankLineView"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@color/colorLine"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/bankTitleTextView"/>
+
+                    <View
+                        android:id="@+id/stripeLineView21"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/colorLine"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/stripeDetailTextView11"/>
+
+                </android.support.constraint.ConstraintLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/shippingCardView"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="20dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/paymentCardView">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/md_white_1000"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/paypalLineView">
+
+
+                        <TextView
+                            android:id="@+id/emailTitleTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="Observación"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/colorTextLight"
+                            android:textSize="@dimen/font_body_size"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/et_fecha_cita"/>
+
+                        <EditText
+                            android:id="@+id/edt_observacion"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="16dp"
+                            android:background="@drawable/layout_border"
+                            android:ems="10"
+                            android:fontFamily="@font/roboto"
+                            android:hint="Observación"
+                            android:gravity="start"
+                            android:lines="4"
+                            android:inputType="textMultiLine"
+                            android:padding="@dimen/space_8"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/colorTextLight"
+                            android:textSize="@dimen/font_body_size"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/emailTitleTextView"/>
+
+                        <EditText
+                            android:id="@+id/et_fecha_cita"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/layout_border"
+                            android:drawableStart="@drawable/ic_date_range_24"
+                            android:drawableLeft="@drawable/ic_date_range_24"
+                            android:drawableTint="@color/md_grey_600"
+                            android:drawablePadding="6dp"
+                            android:ems="10"
+                            android:fontFamily="@font/roboto"
+                            android:hint="Fecha"
+                            android:inputType="date"
+                            android:padding="6dp"
+                            android:focusable="false"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/colorTextLight"
+                            android:textSize="@dimen/font_body_size"
+                            app:layout_constraintEnd_toStartOf="@+id/et_hora_cita"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/nameTitleTextView"/>
+
+                        <EditText
+                            android:id="@+id/et_hora_cita"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/layout_border"
+                            android:drawableStart="@drawable/ic_time_24"
+                            android:drawableLeft="@drawable/ic_date_range_24"
+                            android:drawableTint="@color/md_grey_600"
+                            android:drawablePadding="6dp"
+                            android:ems="10"
+                            android:fontFamily="@font/roboto"
+                            android:hint="Hora"
+                            android:inputType="date"
+                            android:padding="6dp"
+                            android:focusable="false"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/colorTextLight"
+                            android:textSize="@dimen/font_body_size"
+                            app:layout_constraintEnd_toStartOf="@id/sp_alarma_cita"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/et_fecha_cita"
+                            app:layout_constraintTop_toBottomOf="@+id/nameTitleTextView2"/>
+
+
+                        <Spinner
+                            android:id="@+id/sp_alarma_cita"
+                            android:background="@drawable/layout_border"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_8"
+                            android:layout_weight="1"
+                            android:textColor="@color/colorTextLight"
+                            android:textSize="@dimen/font_body_size"
+                            android:textAlignment="viewStart"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/et_hora_cita"
+                            app:layout_constraintTop_toBottomOf="@+id/nameTitleTextView3"
+                            />
+
+<!--                        <EditText-->
+<!--                            android:id="@+id/et_alarma_cita"-->
+<!--                            android:layout_width="110dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="8dp"-->
+<!--                            android:background="@drawable/layout_border"-->
+<!--                            android:drawableEnd="@drawable/ic_alarm_on_24"-->
+<!--                            android:drawableRight="@drawable/ic_alarm_on_24"-->
+<!--                            android:drawableTint="@color/md_grey_600"-->
+<!--                            android:ems="10"-->
+<!--                            android:fontFamily="@font/roboto"-->
+<!--                            android:hint="Fecha"-->
+<!--                            android:inputType="date"-->
+<!--                            android:padding="6dp"-->
+<!--                            android:textAlignment="viewStart"-->
+<!--                            android:textColor="@color/colorTextLight"-->
+<!--                            android:textSize="@dimen/font_body_size"-->
+<!--                            app:layout_constraintEnd_toEndOf="parent"-->
+<!--                            app:layout_constraintHorizontal_bias="0.5"-->
+<!--                            app:layout_constraintStart_toEndOf="@+id/et_hora_cita"-->
+<!--                            app:layout_constraintTop_toBottomOf="@+id/nameTitleTextView3"/>-->
+
+
+                        <TextView
+                            android:id="@+id/nameTitleTextView"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="Fecha"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/colorTextLight"
+                            android:textSize="@dimen/font_body_size"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+
+                        <TextView
+                            android:layout_marginStart="16dp"
+                            android:id="@+id/nameTitleTextView2"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="Hora"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/colorTextLight"
+                            android:textSize="@dimen/font_body_size"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/nameTitleTextView"
+                            app:layout_constraintTop_toTopOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/nameTitleTextView3"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="Alarma"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/colorTextLight"
+                            android:textSize="@dimen/font_body_size"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/nameTitleTextView2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+
+                        <View
+                            android:id="@+id/stripeLineView22"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="16dp"
+                            android:background="@color/colorLine"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/edt_observacion"/>
+
+                    </android.support.constraint.ConstraintLayout>
+
+                    <ImageView
+                        android:id="@+id/paypalImageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="8dp"
+                        android:tint="@color/md_grey_600"
+                        app:layout_constraintBottom_toTopOf="@+id/paypalLineView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/baseline_date_range_black_24"/>
+
+                    <TextView
+                        android:id="@+id/paypalTitleTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="DATOS DE LA CITA"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/md_grey_800"
+                        android:textSize="@dimen/font_body_size"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/paypalImageView"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <View
+                        android:id="@+id/paypalLineView"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@color/colorLine"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/paypalTitleTextView"/>
+
+                </android.support.constraint.ConstraintLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                android:id="@+id/orderConfirmationCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/stripeDetailTextView3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/roboto"
+                        android:lineSpacingExtra="8sp"
+                        android:text="DNI:"
+                        android:textColor="@color/md_grey_800"
+                        android:textSize="@dimen/font_body_size"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/stripeDetailTextView2"/>
+
+                    <ImageView
+                        android:id="@+id/stripeImageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="8dp"
+                        android:tint="@color/md_grey_600"
+                        app:layout_constraintBottom_toTopOf="@+id/stripeLineView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_person"/>
+
+                    <TextView
+                        android:id="@+id/stripeTitleTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="8dp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="@font/roboto"
+                        android:text="DATOS DEL CLIENTE"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/md_grey_800"
+                        android:textSize="@dimen/font_body_size"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/stripeImageView"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/stripeDetailTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/roboto"
+                        android:lineSpacingExtra="8sp"
+                        android:text="Nombres: "
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/md_grey_800"
+                        android:textSize="@dimen/font_body_size"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/stripeLineView"/>
+
+                    <TextView
+                        android:id="@+id/tv_email_cliente"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="@font/roboto"
+                        android:lineSpacingExtra="8sp"
+
+                        android:text="- $20.00"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/md_grey_800"
+                        android:textSize="@dimen/font_body_size"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/stripeDetailTextView2"/>
+
+                    <TextView
+                        android:id="@+id/tv_dni_cliente"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="@font/roboto"
+                        android:lineSpacingExtra="8sp"
+                        android:text="+ $20.00"
+
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/md_grey_800"
+                        android:textSize="@dimen/font_body_size"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/stripeDetailTextView3"/>
+
+
+                    <TextView
+                        android:id="@+id/tv_nombre_cliente"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="@font/roboto"
+                        android:lineSpacingExtra="8sp"
+                        android:text="$300.00"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/md_grey_800"
+                        android:textSize="@dimen/font_body_size"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/stripeDetailTextView"/>
+
+                    <TextView
+                        android:id="@+id/stripeDetailTextView2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/roboto"
+                        android:lineSpacingExtra="8sp"
+                        android:text="Email: "
+                        android:textColor="@color/md_grey_800"
+                        android:textSize="@dimen/font_body_size"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/stripeDetailTextView"/>
+
+                    <View
+                        android:id="@+id/stripeLineView"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@color/colorLine"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/stripeTitleTextView"/>
+
+                    <View
+                        android:id="@+id/stripeLineView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/colorLine"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/stripeDetailTextView3"/>
+
+                </android.support.constraint.ConstraintLayout>
+            </android.support.v7.widget.CardView>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/bt_confirmar_cita"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="bottom"
+        android:background="@color/red_300"
+        android:text="Confirmar Cita"
+        android:textColor="@color/md_white_1000"/>
+
+</android.support.design.widget.CoordinatorLayout>

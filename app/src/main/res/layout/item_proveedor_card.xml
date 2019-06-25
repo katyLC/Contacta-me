@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/placeHolderCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_4"
+        android:layout_marginTop="@dimen/space_4"
+        android:layout_marginEnd="@dimen/space_4"
+        android:layout_marginBottom="@dimen/space_4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_border"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text=" en "
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_promedio_calificacion"
+                app:layout_constraintTop_toBottomOf="@+id/rb_calificacion"/>
+
+            <ImageView
+                android:id="@+id/iv_proveedor_foto"
+                android:layout_width="120dp"
+                android:layout_height="0dp"
+                android:contentDescription="TODO"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@drawable/baseline_image_black_24"/>
+
+            <TextView
+                android:id="@+id/tv_nombre_proveedor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="TextView"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/font_title_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_proveedor_foto"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_proveedor_descripcion"
+                android:layout_width="0dp"
+                android:layout_height="19dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto_light"
+                android:text="TextView"
+                android:textAlignment="viewStart"
+                android:textColor="@color/md_grey_800"
+                android:textSize="@dimen/font_body_s_size"
+                app:layout_constraintBottom_toTopOf="@+id/tv_servicio_ciudad"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_proveedor_foto"
+                app:layout_constraintTop_toBottomOf="@+id/tv_nombre_proveedor"/>
+
+            <TextView
+                android:id="@+id/tv_servicio_ciudad"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/roboto_light"
+                android:text="TextView"
+                android:textAlignment="viewStart"
+                android:textColor="@color/md_grey_800"
+                android:textSize="@dimen/font_body_s_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_proveedor_foto"
+                app:layout_constraintTop_toBottomOf="@+id/tv_proveedor_descripcion"/>
+
+            <RatingBar
+                android:id="@+id/rb_calificacion"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:stepSize="0.5"
+                app:layout_constraintStart_toEndOf="@+id/iv_proveedor_foto"
+                app:layout_constraintTop_toBottomOf="@+id/tv_servicio_ciudad"/>
+
+            <TextView
+                android:id="@+id/tv_promedio_calificacion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto_light"
+                android:text="4.5"
+                android:textColor="@color/md_grey_800"
+                android:textSize="@dimen/font_body_s_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_proveedor_foto"
+                app:layout_constraintTop_toBottomOf="@+id/rb_calificacion"/>
+
+            <TextView
+                android:id="@+id/tv_cantidad_calificacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto_light"
+                android:text="60"
+                android:textColor="@color/md_grey_800"
+                android:textSize="@dimen/font_body_s_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView15"
+                app:layout_constraintTop_toBottomOf="@+id/rb_calificacion"/>
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto_light"
+                android:text="Calificaciones"
+                android:textColor="@color/md_grey_800"
+                android:textSize="@dimen/font_body_s_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_cantidad_calificacion"
+                app:layout_constraintTop_toBottomOf="@+id/rb_calificacion"/>
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<android.support.v7.widget.CardView-->
+    <!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:id="@+id/cv15"-->
+    <!--    android:layout_gravity="center_horizontal"-->
+    <!--    android:layout_margin="5dp"-->
+    <!--    app:cardCornerRadius="3dp"-->
+    <!--    app:cardElevation="2dp">-->
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/lyt_parent"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:gravity="center"-->
+    <!--        android:orientation="vertical">-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/grid_Image"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="170dp"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:scaleType="centerCrop"-->
+    <!--            android:src="@drawable/avatar"/>-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:background="@android:color/white"-->
+    <!--            android:gravity="center"-->
+    <!--            android:orientation="horizontal"-->
+    <!--            android:padding="5dp"-->
+    <!--            android:weightSum="1">-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_weight="0.85"-->
+    <!--                android:background="@android:color/white"-->
+    <!--                android:orientation="vertical">-->
+
+    <!--                <TextView-->
+    <!--                    android:id="@+id/grid_title"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:text="Title"-->
+    <!--                    android:padding="3dp"-->
+    <!--                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"/>-->
+
+    <!--                <TextView-->
+    <!--                    android:id="@+id/grid_body"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:text="Body Title"-->
+    <!--                    android:padding="3dp"-->
+    <!--                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"-->
+    <!--                    android:textColor="@color/fontColor"/>-->
+
+    <!--            </LinearLayout>-->
+    <!--        </LinearLayout>-->
+    <!--    </LinearLayout>-->
+
+    <!--</android.support.v7.widget.CardView>-->

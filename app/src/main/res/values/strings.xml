@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Contáctame</string>
+    <string name="email">Email</string>
+    <string name="password">Contraseña</string>
+    <string name="olvidaste_password">Olvidaste tu contraseña?</string>
+    <string name="text_registrar">REGISTRAR</string>
+    <string name="brand_name">Brand</string>
+    <string name="lema">Busca lo que necesitas</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="location_permission_denied">Se requiere que la ubicación del dispositivo esté habilitada</string>
+    <string name="permission_required_toast">Permiso de localización es requerido</string>
+    <string name="permission_rationale_location">Acceso al servicio de localización es requerido.</string>
+    <string name="dummy_small_text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
+
+</resources>

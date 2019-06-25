@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.example.contactame">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".activities.RatingActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity"/>
+            <intent-filter>
+                <action android:name="RatingActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.CitasActivity">
+        </activity>
+        <activity android:name=".activities.ConfirmacionCItaActivity">
+        </activity>
+        <activity android:name=".activities.CitaActivity">
+        </activity>
+        <activity android:name=".activities.ContactosActivity">
+        </activity>
+        <activity android:name=".activities.FavoritosActivity">
+        </activity>
+        <activity android:name=".activities.ClienteEditarPerfilActivity">
+        </activity>
+        <activity android:name=".activities.ProveedorEditarDetalleActivity">
+        </activity>
+        <activity android:name=".activities.ProveedorDetalleActivity">
+        </activity>
+        <activity android:name=".activities.ChatActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.ProveedorDetalleActivity"/>
+            <intent-filter>
+                <action android:name="ChatActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.ProveedorMostrarPerfilClienteActivity">
+        </activity>
+        <activity android:name=".activities.ProveedoresListActivity">
+        </activity>
+        <activity android:name=".activities.ProveedorServicioActivity">
+        </activity>
+        <activity android:name=".activities.SignUpActivity">
+        </activity>
+        <activity android:name=".activities.LoginActivity">
+        </activity>
+        <activity android:name=".activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <service android:name=".firebase.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyA5LdKxiqaeIyrHsPsfa54Nu1fZe8h8P_4"/>
+    </application>
+
+</manifest>
